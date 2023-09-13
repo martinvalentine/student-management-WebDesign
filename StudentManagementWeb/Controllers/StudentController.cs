@@ -33,12 +33,14 @@ namespace StudentManagementWeb.Controllers
             };
         }
 
+        [Route("Admin/Student/List")]
         public IActionResult Index()
         {
             // Returns View Index.cshtml with Model as a list of sv listStudents
             return View(listStudents);
         }
 
+        [Route("Admin/Student/Add")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -56,6 +58,8 @@ namespace StudentManagementWeb.Controllers
             };
             return View();
         }
+
+        [Route("Admin/Student/Add")]
         [HttpPost]
         public IActionResult Create(Student s)
         {
