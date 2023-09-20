@@ -1,4 +1,16 @@
-﻿@model IEnumerable<Student>
+﻿@{
+    Layout = "~/Views/Shared/MyLayoutHelper.cshtml";
+}
+@section Scripts{
+    <script>
+        var table = document.querySelector("table");
+        table.onclick = function onTableClick() {
+            table.style = "background-color: yellow;"
+        }
+    </script>
+}
+
+@model IEnumerable<Student>
 
 @* 
 Declare @model as IEnumerable<Student> - Collection of student list

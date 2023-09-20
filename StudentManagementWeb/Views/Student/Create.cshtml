@@ -1,8 +1,6 @@
 ﻿@model Student
 <div>
-    @* <form asp-controller="Student" asp-action="Create" method="post" class="mt-3"> *@
-
-    <form action="/Admin/Student/Add" method="post" class="mt-3" enctype="multipart/form-data">
+    <form asp-controller="Student" asp-action="Create" method="post" class="mt-3">
         @* Name *@
         <div style="margin-top:7px" class="form-group row">
             <label asp-for="Name" class="col-sm-2 col-form-label"></label>
