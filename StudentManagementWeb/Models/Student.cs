@@ -11,7 +11,7 @@ namespace StudentManagementWeb.Models
         public string? Name { get; set; } //Họ tên
 
         [Required(ErrorMessage = "Email bắt buộc phải được nhập")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}@gmail\.com")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@gmail\.com")]
         public string? Email { get; set; } //Email
 
         [StringLength(100, MinimumLength = 8)]
