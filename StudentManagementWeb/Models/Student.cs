@@ -11,7 +11,7 @@ namespace StudentManagementWeb.Models
         public string? Name { get; set; } //Họ tên
 
         [Required(ErrorMessage = "Email bắt buộc phải được nhập")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@gmail\.com")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+[A-Za-z0-9._%+-].com")] // Tất cả đuôi email đều đc
         public string? Email { get; set; } //Email
 
         [StringLength(100, MinimumLength = 8)]
@@ -36,9 +36,10 @@ namespace StudentManagementWeb.Models
         [Required(ErrorMessage = "Địa chỉ bắt buộc phải được nhập")]
         public string? Address { get; set; }//Địa chỉ
 
-        [Range(typeof(DateTime), "1/1/1963", "12/31/2005")]
+        [Required(ErrorMessage = "Hãy nhập ngày tháng năm sinh")]
+
+        [Range(typeof(DateTime), "1/1/1963", "12/31/2005", ErrorMessage = "Hãy nhập ngày tháng năm sinh trước 2005 và sau 1963")]
         [DataType(DataType.Date)]
-        [Required(ErrorMessage = "Ngày nhập bắt buộc phải được nhập")]
         public DateTime DateOfBirth { get; set; }//Ngày sinh
     }
 }
