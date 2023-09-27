@@ -59,7 +59,7 @@ namespace StudentManagementWeb.Controllers
             return View();
         }
 
-        [HttpPost("Admin/Student/Add")]
+
         public IActionResult Create(Student s)
         {
             s.Id = listStudents.Last<Student>().Id + 1;
