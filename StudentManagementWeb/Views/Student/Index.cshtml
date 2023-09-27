@@ -25,6 +25,7 @@ Use Razor to present the student list to the View
             <th>Họ tên</th>
             <th>Ngày sinh</th>
             <th>Ngành</th>
+            <th>Điểm</th>
             <th>Giới tính</th>
             <th>Hệ đào tạo</th>
             <th>Địa chỉ</th>
@@ -57,6 +58,7 @@ Use Razor to present the student list to the View
                     }
                 }
                 <td>@str</td> @* Print the major in switch-case *@
+                <td>@s.Point</td>
                 <td>@(s.Gender == Gender.Male ? "Nam" : "Nữ")</td>
                 <td>@(s.IsRegular ? "Chính quy": "Phi chính quy")</td>
                 <td>@s.Address</td>
